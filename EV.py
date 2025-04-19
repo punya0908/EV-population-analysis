@@ -174,8 +174,8 @@ class EVDataModel:
 
     def hist_all_numerical(self):
         num_cols = self.df.select_dtypes(include=['number']).columns
-        self.df[num_cols].hist(bins=20, figsize=(12, 8), color='blue')
-        plt.suptitle("Histograms for All Numerical Columns")
+        self.df[num_cols].hist(bins=20, figsize=(12, 8), color='skyblue')
+        plt.suptitle("Histograms for All Numerical Columns", fontsize=16, weight='bold')
         plt.tight_layout()
         plt.show()
 
