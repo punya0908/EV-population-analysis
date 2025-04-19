@@ -27,10 +27,31 @@ class EVDataModel:
         print(self.df.head())
 
     def info(self):
+        '''
         print("📋 Data Types:")
         print(self.df.dtypes)
         print("\n❓ Null Values:")
         print(self.df.isnull().sum())
+        '''
+
+        # Data Type Overview
+        print("📋 **Data Types Overview**:")
+        print(self.df.dtypes)
+        
+        # Null Value Summary
+        print("\n❓ **Missing Data Summary**:")
+        missing_data = self.df.isnull().sum()
+        missing_data_percent = (missing_data / len(self.df)) * 100
+        missing_info = pd.DataFrame({
+            'Missing Values': missing_data,
+            'Percentage': missing_data_percent.round(2)
+        })
+        print(missing_info[missing_info['Missing Values'] > 0].sort_values(by='Missing Values', ascending=False))
+        
+        # Total Records and Columns in the Dataset
+        print("\n📝 **Data Shape:**")
+        print(f"Total Records: {self.df.shape[0]}")
+        print(f"Total Columns: {self.df.shape[1]}")
 
     def describe(self): # or we can add here also
         print("📈 Summary Statistics:")
