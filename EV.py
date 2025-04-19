@@ -62,9 +62,20 @@ class EVDataModel:
         plt.show()
 
     def heatmap_corr(self):
+        '''
         corr = self.df.corr(numeric_only=True)
         sns.heatmap(corr, annot=True, cmap='Spectral')
         plt.title("Correlation Heatmap")
+        plt.tight_layout()
+        plt.show()
+        '''
+
+        corr = self.df.corr(numeric_only=True)
+        cmap = sns.diverging_palette(230, 20, as_cmap=True)
+        sns.heatmap(corr, annot=True, fmt=".2f", cmap=cmap, center=0, square=True, linewidths=0.5, cbar_kws={"shrink": 0.8})
+        plt.title("Correlation Heatmap of Numerical Features", fontsize=16, weight='bold')
+        plt.xticks(rotation=45, fontsize=12)
+        plt.yticks(rotation=0, fontsize=12)
         plt.tight_layout()
         plt.show()
 
