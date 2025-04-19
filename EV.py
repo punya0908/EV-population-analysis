@@ -206,11 +206,11 @@ if __name__ == "__main__":
     print("6 - Barplot (Top EV Makes)")
     print("7 - Histogram (Model Year)")
     print("8 - Heatmap (Correlation)")
-    print("9 - Boxplot (Electric Range)") # this can be edited in multiple ways
+    print("9 - Boxplot (Electric Range)") # two ways
     print("10 - IQR Outliers (Electric Range)")
     print("11 - Z-Score Outliers (Electric Range)")
     print("12 - Handle Missing Values")
-    print("13 - Line Plot (Model Year vs Electric Range)") # i have to check this one, THIS IS NOT TO BE ADDED
+    print("13 - Line Plot (Model Year vs Electric Range)") # updated
     print("14 - Scatter Plot (Model Year vs Electric Range)")
     print("15 - Skewness of Numerical Columns")
     print("16 - Histograms (All Numerical in One Page)")
