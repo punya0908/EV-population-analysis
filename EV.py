@@ -81,7 +81,7 @@ class EVDataModel:
             plt.show()
         '''
 
-        sns.boxplot(x=self.df[col], color='red')
+        sns.boxplot(x=self.df[col], color='green')
         plt.title(f"Boxplot of {col}")
         plt.xlabel(col)
         plt.tight_layout()
