@@ -69,9 +69,9 @@ class EVDataModel:
         plt.show()
 
     def boxplot_column(self, col):
-        '''
-        num_cols = self.df.select_dtypes(include=['number']).columns ###
-        sns.boxplot(data=self.df[num_cols], color='red') ###
+        ''' # this is if you wanna see all numerical columns in different plots
+        num_cols = self.df.select_dtypes(include=['number']).columns
+        sns.boxplot(data=self.df[num_cols], color='red')
         for col in num_cols:
             plt.figure(figsize=(10, 6))
             sns.boxplot(data=self.df[col], color='red')
